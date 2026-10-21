@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes circuitFlow {
+  from {
+    stroke-dashoffset: 44;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circuitFlowReverse {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 44;
+  }
+}
+
+.animate-circuit-flow {
+  animation: circuitFlow 1.2s linear infinite;
+}
+
+.animate-circuit-flow-fast {
+  animation: circuitFlow 0.7s linear infinite;
+}
+
+.animate-circuit-flow-reverse {
+  animation: circuitFlowReverse 1.2s linear infinite;
+}
